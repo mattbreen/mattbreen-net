@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me – Matt Breen</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Add a favicon link here when ready -->
+</head>
+<body>
+    <!-- Site header with simple navigation -->
+    <header class="site-header">
+        <div class="container header-container">
+            <h1 class="site-title"><a href="index.html">Matt Breen</a></h1>
+            <nav class="nav">
+                <a href="about.html">About</a>
+                <a href="games.html">Games</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section about-section">
+            <div class="container about-container">
+                <h2>About Me</h2>
+                <div class="about-layout">
+                    <!-- Placeholder image for the profile picture. Replace this with your own photo when ready -->
+                    <div class="about-image">
+                        <img src="https://via.placeholder.com/200" alt="Profile photo of Matt Breen">
+                    </div>
+                    <div class="about-text">
+                        <p>Hello! I’m Matt Breen, a group product manager and director of product management. I work on an exciting game built in the Unity game engine, primarily writing C# code. When I’m not orchestrating product strategy or designing game mechanics, you’ll find me exploring new recipes, discovering delicious restaurants, and planning my next travel adventure.</p>
+                        <p>This site is my digital calling card — a place to share my professional journey, showcase my projects, and give you a glimpse into who I am. Feel free to browse around and reach out if you’d like to collaborate or just chat about games, products, cooking, or travel!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="about-year"></span> Matt Breen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('about-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

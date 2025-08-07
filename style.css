@@ -24,6 +24,22 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Flex container for header content */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Remove underline and default link color from site title link */
+.site-title a {
+    color: inherit;
+    text-decoration: none;
+}
+.site-title a:hover {
+    text-decoration: underline;
+}
+
 .site-title {
     margin: 0;
     font-size: 2.5rem;
@@ -51,6 +67,83 @@ body {
 
 .nav a:hover {
     color: #dbeafe;
+}
+
+/* Hero section styles for the homepage */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background-color: #f5f8fd;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin: 0 0 10px;
+    font-weight: 700;
+}
+
+.hero-tagline {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.hero-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.hero-nav a {
+    font-size: 1.2rem;
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+.hero-nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #1a73e8;
+    transition: width 0.3s ease;
+    margin: auto;
+}
+
+.hero-nav a:hover::after {
+    width: 100%;
+}
+
+/* About page layout */
+.about-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-image img {
+    max-width: 250px;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+/* Placeholder styling for games page */
+.games-placeholder {
+    margin-top: 40px;
+    padding: 40px;
+    border: 2px dashed #d1d5db;
+    text-align: center;
+    color: #6b7280;
 }
 
 /* Section styles */
