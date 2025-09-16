@@ -137,13 +137,19 @@ body {
     flex: 1;
 }
 
-/* Placeholder styling for games page */
-.games-placeholder {
+/* Embedded game wrapper on the games page */
+.game-embed {
     margin-top: 40px;
-    padding: 40px;
-    border: 2px dashed #d1d5db;
-    text-align: center;
-    color: #6b7280;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-embed iframe {
+    max-width: 100%;
+    border-radius: 12px;
+    border: 0;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
 }
 
 /* Section styles */
