@@ -26,22 +26,47 @@
             <div class="container">
                 <h2>Games</h2>
                 <p>Try a demo of a bad game that will never be finished!</p>
-                <div class="game-embed">
-                    <div class="game-launcher"
-                         data-game-src="webgl/w0.3/index.html"
-                         data-game-title="Unity WebGL build: w0.3"
-                         data-game-width="960"
-                         data-game-height="600">
-                        <button type="button" class="game-play-button">
-                            <span class="game-play-icon" aria-hidden="true">&#9658;</span>
-                            Play the demo
-                        </button>
-                        <p class="game-launcher-hint"><a href="webgl/w0.3/index.html" target="_blank" rel="noopener">Open in a new tab instead</a></p>
+
+                <article class="game-section">
+                    <div class="game-section-header">
+                        <h3 class="game-section-title">Bad Game Demo (w0.3)</h3>
+                        <p class="game-section-description">The latest Unity WebGL build of the questionable platformer. Launch it below or pop it out into its own tab if you prefer.</p>
                     </div>
-                    <noscript>
-                        <p class="game-noscript">JavaScript is required to load the WebGL build on this page. <a href="webgl/w0.3/index.html" target="_blank" rel="noopener">Open the demo in a new tab.</a></p>
-                    </noscript>
-                </div>
+                    <div class="game-embed">
+                        <div class="game-launcher"
+                             data-game-src="webgl/w0.3/index.html"
+                             data-game-title="Unity WebGL build: w0.3"
+                             data-game-width="960"
+                             data-game-height="600">
+                            <p class="game-launcher-text">Press play to load the embedded demo right on this page.</p>
+                            <button type="button" class="game-play-button">
+                                <span class="game-play-icon" aria-hidden="true">&#9658;</span>
+                                Play the demo
+                            </button>
+                            <p class="game-launcher-hint"><a href="webgl/w0.3/index.html" target="_blank" rel="noopener">Open in a new tab instead</a></p>
+                        </div>
+                        <noscript>
+                            <p class="game-noscript">JavaScript is required to load the WebGL build on this page. <a href="webgl/w0.3/index.html" target="_blank" rel="noopener">Open the demo in a new tab.</a></p>
+                        </noscript>
+                    </div>
+                </article>
+
+                <article class="game-section">
+                    <div class="game-section-header">
+                        <h3 class="game-section-title">Future Project Placeholder</h3>
+                        <p class="game-section-description">Another ill-advised idea is brewing, but it needs more time in the lab before you can play it. Check back here for updates.</p>
+                    </div>
+                    <div class="game-embed">
+                        <div class="game-launcher game-launcher--disabled">
+                            <p class="game-launcher-text">A new build will appear here once there is anything remotely playable.</p>
+                            <button type="button" class="game-play-button" disabled aria-disabled="true">
+                                <span class="game-play-icon" aria-hidden="true">&#8987;</span>
+                                Coming soon
+                            </button>
+                            <p class="game-launcher-hint">Stay tuned for the next experiment.</p>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
@@ -58,26 +83,26 @@
         gamesYear.textContent = new Date().getFullYear();
     }
 
-    const gameLauncher = document.querySelector('.game-launcher');
-    if (gameLauncher) {
-        const playButton = gameLauncher.querySelector('.game-play-button');
-        const gameSrc = gameLauncher.dataset.gameSrc;
+    const gameLaunchers = document.querySelectorAll('.game-launcher');
+    gameLaunchers.forEach((launcher) => {
+        const playButton = launcher.querySelector('.game-play-button');
+        const gameSrc = launcher.dataset.gameSrc;
 
         if (playButton && gameSrc) {
             playButton.addEventListener('click', () => {
                 const iframe = document.createElement('iframe');
                 iframe.src = gameSrc;
-                iframe.title = gameLauncher.dataset.gameTitle || 'Unity WebGL build';
-                iframe.width = gameLauncher.dataset.gameWidth || '960';
-                iframe.height = gameLauncher.dataset.gameHeight || '600';
+                iframe.title = launcher.dataset.gameTitle || 'Unity WebGL build';
+                iframe.width = launcher.dataset.gameWidth || '960';
+                iframe.height = launcher.dataset.gameHeight || '600';
                 iframe.loading = 'lazy';
                 iframe.setAttribute('frameborder', '0');
                 iframe.setAttribute('allowfullscreen', '');
 
-                gameLauncher.replaceWith(iframe);
+                launcher.replaceWith(iframe);
             }, { once: true });
         }
-    }
+    });
     </script>
 </body>
 </html>
