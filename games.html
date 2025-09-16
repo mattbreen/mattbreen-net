@@ -27,10 +27,21 @@
                 <h2>Games</h2>
                 <p>Welcome to the games page! Here you’ll find playable demos of my Unity projects. Dive into the latest WebGL build below and stay tuned for additional experiments.</p>
                 <div class="game-embed">
-                    <iframe src="webgl/w0.3/index.html"
-                            title="Unity WebGL build: w0.3"
-                            width="960" height="600" frameborder="0"
-                            allowfullscreen loading="lazy"></iframe>
+                    <div class="game-launcher"
+                         data-game-src="webgl/w0.3/index.html"
+                         data-game-title="Unity WebGL build: w0.3"
+                         data-game-width="960"
+                         data-game-height="600">
+                        <p class="game-launcher-text">The Unity WebGL build is a hefty download, so it won’t start automatically. Click the button below when you’re ready to load the demo.</p>
+                        <button type="button" class="game-play-button">
+                            <span class="game-play-icon" aria-hidden="true">&#9658;</span>
+                            Play the demo
+                        </button>
+                        <p class="game-launcher-hint"><a href="webgl/w0.3/index.html" target="_blank" rel="noopener">Open the build in a new tab instead</a></p>
+                    </div>
+                    <noscript>
+                        <p class="game-noscript">JavaScript is required to load the WebGL build on this page. <a href="webgl/w0.3/index.html" target="_blank" rel="noopener">Open the demo in a new tab.</a></p>
+                    </noscript>
                 </div>
             </div>
         </section>
@@ -43,7 +54,31 @@
     </footer>
 
     <script>
-    document.getElementById('games-year').textContent = new Date().getFullYear();
+    const gamesYear = document.getElementById('games-year');
+    if (gamesYear) {
+        gamesYear.textContent = new Date().getFullYear();
+    }
+
+    const gameLauncher = document.querySelector('.game-launcher');
+    if (gameLauncher) {
+        const playButton = gameLauncher.querySelector('.game-play-button');
+        const gameSrc = gameLauncher.dataset.gameSrc;
+
+        if (playButton && gameSrc) {
+            playButton.addEventListener('click', () => {
+                const iframe = document.createElement('iframe');
+                iframe.src = gameSrc;
+                iframe.title = gameLauncher.dataset.gameTitle || 'Unity WebGL build';
+                iframe.width = gameLauncher.dataset.gameWidth || '960';
+                iframe.height = gameLauncher.dataset.gameHeight || '600';
+                iframe.loading = 'lazy';
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allowfullscreen', '');
+
+                gameLauncher.replaceWith(iframe);
+            }, { once: true });
+        }
+    }
     </script>
 </body>
 </html>
