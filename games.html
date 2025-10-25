@@ -103,6 +103,7 @@
                 iframe.loading = 'lazy';
                 iframe.setAttribute('frameborder', '0');
                 iframe.setAttribute('allowfullscreen', '');
+                iframe.setAttribute('allow', 'autoplay; fullscreen; gamepad');
 
                 launcher.replaceWith(iframe);
             }, { once: true });
