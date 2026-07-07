@@ -3,49 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me – Matt Breen</title>
+    <title>About – Breen Consulting LLC</title>
+    <meta name="description" content="About Matt Breen: product leader, PLG consultant, and founder of Breen Consulting LLC.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <!-- Site header with simple navigation -->
     <header class="site-header">
         <div class="container header-container">
-            <h1 class="site-title"><a href="index.html">Matt Breen</a></h1>
+            <p class="wordmark"><a href="index.html">Breen Consulting <span class="wordmark-llc">LLC</span></a></p>
             <nav class="nav">
+                <a href="index.html#services">Services</a>
                 <a href="about.html">About</a>
-                <a href="games.html">Games</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="nav-cta">Get in touch</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="section about-section">
-            <div class="container about-container">
-                <h2>About Me</h2>
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>About Matt</h2>
+                </div>
                 <div class="about-layout">
                     <div class="about-image">
-                        <img src="./images/matt.jpeg" alt="Profile photo of Matt Breen">
+                        <img src="./images/matt.jpeg" alt="Profile photo of Matt Breen">
                     </div>
                     <div class="about-text">
-                        <p>Hello! I’m Matt Breen. I spent over a decade at Constant Contact, most recently as a Group Product Manager, and I’m currently consulting on product-led growth at Thryv. My love for product started early: from building with Legos as a kid, to modding games as a teen, to designing and developing my own small-scale, and never finished video games today. I’m drawn to systems, iteration, and the satisfaction of seeing something I built come to life.</p>
-                        <p>Outside of work, I’m either in the kitchen trying out new recipes or planning the next trip with my wife (who does most of the planning). Born and raised 45min outside of the city, I’ve now lived in Boston for over 10 years in many of the different neighborhoods.</p>
+                        <p>I'm Matt Breen, founder of Breen Consulting LLC. I took an unusual route into product: I started my career in software sales at Constant Contact, worked more and more closely with product management, and eventually made the jump into PM. Over the next decade I climbed to Group Product Manager and became a go-to voice for product leadership on top-of-funnel growth: trial creates, early onboarding, and conversion.</p>
+                        <p>That sales background never left me. Some of my best work happens at the seams between product, sales, and marketing, and it's a big part of how I consult today. At Thryv, I'm working on their recently launched free trial from a PLG perspective: GTM strategy, PQL scoring and routing, orchestrating data between systems, funnel reporting, and scaling the internal processes that hold it together.</p>
+                        <p>I come from a family of software engineers, and hobby coding has always been something I dabble in. From building with Legos as a kid, to modding games as a teen, to tinkering on my own small-scale and never finished video games today, I'm drawn to systems, iteration, and the satisfaction of seeing something I built come to life. That same instinct of build, measure, refine is how I approach client work.</p>
+                        <p>Outside of work, I'm either in the kitchen trying out new recipes or planning the next trip with my wife (who does most of the planning). Born and raised 45 minutes outside the city, I've now lived in Boston for over 10 years across many of its neighborhoods.</p>
+                        <p>Curious about those never-finished games? They live on in the <a href="games.html">games corner</a>.</p>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="about-year"></span> Matt Breen. All rights reserved.</p>
+        <div class="container footer-container">
+            <p>&copy; <span id="year"></span> Breen Consulting LLC. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/matt-breen-1551769a/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:matt@mattbreen.net">Email</a>
+                <a href="games.html">Games</a>
+            </div>
         </div>
     </footer>
 
     <script>
-    document.getElementById('about-year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>

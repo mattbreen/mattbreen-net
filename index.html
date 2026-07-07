@@ -3,33 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matt Breen – Home</title>
+    <title>Breen Consulting LLC</title>
+    <meta name="description" content="Breen Consulting LLC helps SaaS companies grow through product-led growth strategy and hands-on product management consulting. Led by Matt Breen, former Group Product Manager at Constant Contact.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <main>
-        <!-- Hero section on the homepage with minimal, centered content -->
-        <section class="hero">
-            <h1 class="hero-title">Matt Breen</h1>
-            <p class="hero-tagline">Product leader, hobby game developer, travel enthusiast, food enjoyer.</p>
-            <nav class="hero-nav">
+    <header class="site-header">
+        <div class="container header-container">
+            <p class="wordmark"><a href="index.html">Breen Consulting <span class="wordmark-llc">LLC</span></a></p>
+            <nav class="nav">
+                <a href="index.html#services">Services</a>
                 <a href="about.html">About</a>
-                <a href="games.html">Games</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="nav-cta">Get in touch</a>
             </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <p class="eyebrow">Breen Consulting LLC</p>
+                <h1>Turn your product into your best growth channel.</h1>
+                <p class="hero-lede">I'm Matt Breen, a product leader with over a decade in SaaS. I started my career in sales, so I build product-led growth that works <b>with</b> your sales and marketing teams, not around them.</p>
+            </div>
         </section>
+
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Services</h2>
+                    <p>Focused engagements that move the top of the funnel: trial creates, early onboarding, activation, and conversion.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Product-Led Growth</h3>
+                        <p>Make the product itself do the selling, from first touch to paid conversion.</p>
+                        <ul>
+                            <li>Free trial strategy, onboarding &amp; activation</li>
+                            <li>PQL scoring, routing &amp; sales handoff</li>
+                            <li>Funnel reporting &amp; data orchestration across systems</li>
+                            <li>PLG strategy for sales-led organizations</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Product Management Consulting</h3>
+                        <p>Ship the right things, faster, with product practices that actually stick.</p>
+                        <ul>
+                            <li>Product strategy &amp; roadmap development</li>
+                            <li>Discovery, validation &amp; prioritization</li>
+                            <li>GTM alignment between product, sales &amp; marketing</li>
+                            <li>Metrics frameworks &amp; internal process scaling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Ways to work together</h2>
+                    <p>Engagements sized to the problem, not the other way around.</p>
+                </div>
+                <div class="engagement-list">
+                    <div class="card">
+                        <h3>Advisory</h3>
+                        <p>Ongoing counsel for founders and product leaders. A senior sounding board on strategy, growth, and hard calls.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Project-based</h3>
+                        <p>A defined problem, a defined outcome. Think a PLG audit, an onboarding overhaul, or a PQL scoring and routing build-out.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Embedded</h3>
+                        <p>Hands-on, part-time product leadership inside your team. Driving the work, not just recommending it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>Experience</h2>
+                    <p>I've sat on both sides of the funnel: years carrying a quota, then a decade building the product that fills it. That's why my growth work lands with sales and marketing instead of fighting them.</p>
+                </div>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <h3>Thryv</h3>
+                        <p class="experience-meta">Product-Led Growth Consultant · Current</p>
+                        <p>Consulting on Thryv's recently launched free trial: GTM strategy, PQL scoring and routing, data orchestration between systems, funnel reporting, and scaling the internal processes behind it all, in close partnership with sales and marketing.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Constant Contact</h3>
+                        <p class="experience-meta">Sales to Group Product Manager · 10+ years</p>
+                        <p>Started in sales, moved into product management, and climbed to Group Product Manager. Became a go-to voice for product leadership on top-of-funnel growth: trial creates, early onboarding, and conversion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Matt Breen. All rights reserved.</p>
+        <div class="container footer-container">
+            <p>&copy; <span id="year"></span> Breen Consulting LLC. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/matt-breen-1551769a/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:matt@mattbreen.net">Email</a>
+                <a href="games.html">Games</a>
+            </div>
         </div>
     </footer>
 
     <script>
-    // Update the footer year automatically
     document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
